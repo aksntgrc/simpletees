@@ -1,6 +1,3 @@
-/* SimpleTees responsive layout
-   Keeps the original desktop design and reflows content on smaller screens. */
-
 *,
 *::before,
 *::after {
@@ -25,7 +22,6 @@ img {
   height: auto;
 }
 
-/* Tablet and mobile layout */
 @media (max-width: 1350px) {
   body {
     overflow-x: hidden;
@@ -49,7 +45,6 @@ img {
     gap: 16px;
   }
 
-  /* Shared header and navigation */
   .header {
     position: absolute !important;
     top: 0 !important;
@@ -87,7 +82,6 @@ img {
     z-index: 5;
   }
 
-  /* Header navigation positions are shared across pages. */
   .home2,
   .home { left: 24px !important; }
 
@@ -142,7 +136,6 @@ img {
     order: 92;
   }
 
-  /* Homepage */
   .home .canvas,
   .home .backdrop {
     display: none !important;
@@ -236,7 +229,6 @@ img {
     line-height: 1.5;
   }
 
-  /* Product detail pages */
   .product-page .home2,
   .product-page .home21,
   .product-page .home211,
@@ -523,7 +515,6 @@ img {
     justify-content: center;
   }
 
-  /* Privacy policy page */
   .privacy-policy .policy-intro {
     position: absolute !important;
     top: 116px !important;
@@ -604,7 +595,6 @@ img {
   .privacy-policy .cookies-and-website2 { order: 12; }
 }
 
-/* Small phones */
 @media (max-width: 520px) {
   body > .home,
   .product-page,
@@ -687,7 +677,6 @@ img {
   .privacy-nav { left: 112px !important; top: 104px !important; }
 }
 
-/* Keep footer policy links with the footer rather than in the page content flow. */
 @media (max-width: 1350px) {
   body > .home > a.button-link:has(.home3),
   .product-page > a.button-link:has(.home3),
@@ -699,3 +688,161 @@ img {
   }
 }
 
+
+@media (max-width: 1350px) {
+
+  .privacy-policy .policy-intro {
+    height: 150px !important;
+  }
+
+
+  .privacy-policy .contact {
+    display: block !important;
+    flex: 0 0 auto !important;
+    flex-direction: initial !important;
+    align-items: initial !important;
+    gap: 0 !important;
+    min-height: 52px !important;
+    height: 52px !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+  }
+
+  .privacy-policy .contact .contents-background,
+  .privacy-policy .contact .contents-background2 {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 52px !important;
+  }
+
+  .privacy-policy .contact .how-we-use {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    min-height: 52px !important;
+    padding: 15px !important;
+  }
+}
+
+@media (max-width: 1350px) {
+
+  .product-page a.button-link {
+    position: relative !important;
+    display: block !important;
+    flex: 0 0 auto !important;
+    align-self: flex-start !important;
+
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+
+    color: #52493e !important;
+    text-decoration: none !important;
+  }
+
+  .product-page a.button-link b {
+    position: relative !important;
+    display: inline !important;
+
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+
+    width: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    background: transparent !important;
+    color: #52493e !important;
+
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+    font-weight: 400 !important;
+  }
+
+  .product-page a.button-link:hover {
+    background: transparent !important;
+    text-decoration: underline !important;
+  }
+
+  .product-page .quantity-control {
+    margin-left: 0 !important;
+    align-self: flex-start;
+  }
+
+  .product-page .add-to-cart,
+  .product-page .order-now {
+    width: 100% !important;
+    max-width: 570px;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+}
+
+@media (max-width: 1350px) {
+
+  .product-page .home2,
+  .product-page .home21,
+  .product-page .home211,
+  .product-page .home22,
+  .product-page .home222,
+  .product-page a.button-link:has(.home21),
+  .product-page a.button-link:has(.home211),
+  .product-page a.button-link:has(.home22) {
+    position: relative !important;
+    display: block !important;
+    flex: 0 0 auto !important;
+    align-self: flex-start !important;
+    order: 1 !important;
+
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+
+    width: fit-content !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+
+    color: #52493e !important;
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+    text-decoration: none !important;
+  }
+
+  .product-page a.button-link b {
+    position: static !important;
+    display: inline !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    color: #52493e !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+  }
+}
