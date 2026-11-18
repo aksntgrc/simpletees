@@ -1,9 +1,9 @@
 .button-link {
-  text-decoration: none;      /* Removes the underline from the link */
+  text-decoration: none;      
 }
 
 .shop {
-  display: inline-block;      /* Turns the <b> text into a clickable box */
+  display: inline-block;      
   padding: 10px 20px;
   background-color: black;
   color: white;
@@ -16,11 +16,11 @@
 }
 
 .button-link {
-  text-decoration: none;      /* Removes the underline from the link */
+  text-decoration: none;     
 }
 
 .contacts {
-  display: inline-block;      /* Turns the <b> text into a clickable box */
+  display: inline-block;     
   padding: 10px 20px;
   background-color: black;
   color:white;
