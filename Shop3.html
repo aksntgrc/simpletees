@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Do Good Work | Simple Tees</title>
+  <script src="JS/Shop.js" defer></script>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	
+  	<link rel="stylesheet"  href="CSS/index3.css">
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap">
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap">
+<style> 	
+.button-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #222222;
+      color: black;
+      text-decoration: none;
+      border-radius: 5px; } 	
+	  </style>
+  	
+<style>
+.size-selector { position:absolute; top:550px; left:775px; display:flex; gap:18px; }
+.size-option { width:78px; height:55px; border:1.5px solid #dbdcce; border-radius:7px; background:#fafaff; color:#20231c; font:700 16px 'Open Sans',sans-serif; cursor:pointer; }
+.size-option.selected { background:#3e4e13; border-color:#3e4e13; color:#fafaff; }
+.size-option:focus-visible, .quantity-control button:focus-visible, #order-now-button:focus-visible { outline:3px solid #9aa66d; outline-offset:3px; }
+.quantity-label { position:absolute; top:642px; left:777px; font-size:14px; font-weight:700; }
+.quantity-control { position:absolute; top:665px; left:875px; display:flex; align-items:center; height:36px; border:1px solid #dbdcce; border-radius:6px; overflow:hidden; background:#fff; }
+.quantity-control button { width:36px; height:36px; border:0; background:#f1f0e8; color:#20231c; font-size:20px; cursor:pointer; }
+.quantity-control input { width:48px; height:34px; border:0; text-align:center; font:16px 'Open Sans',sans-serif; }
+.order-now3 { position:absolute; inset:0; width:271px; height:59px; border:0; border-radius:7px; background:#52493e; color:#fafaff; font:700 14px 'Open Sans',sans-serif; cursor:pointer; }
+.order-now3:hover { background:#3e4e13; }
+@media (max-width: 900px) {
+  .product-page { min-width:0; height:auto; min-height:1100px; overflow-x:hidden; }
+  .size-selector { left:5%; top:650px; gap:8px; }
+  .size-option { width:min(16vw,78px); }
+  .quantity-label { left:5%; top:730px; }
+  .quantity-control { left:35%; top:720px; }
+  .order-now { left:5%; top:800px; }
+  .add-to-cart { left:5%; top:870px; }
+  .comfortable-everyday-fit { left:5%; top:950px; }
+}
+</style>
+<style>
+.brand-home-link { font-weight: 700; text-decoration: none; cursor: pointer; }
+.brand-home-link:hover { text-decoration: underline; }
+.brand-home-link:focus-visible { outline: 3px solid #9aa66d; outline-offset: 4px; }
+</style>
+  <link rel="stylesheet" href="CSS/responsive.css">
+  <link rel="stylesheet" href="CSS/order-form.css">
+</head>
+<body data-product-name="Do Good Work">
+  	
+  	<div class="product-page">
+    		<div class="header">
+    		</div>
+    		<a href="SimpleTees.html" class="simple-tees brand-home-link">SIMPLE TEES</a>
+<a href="SimpleTees.html" class="button-link">
+  <b class="home">HOME</b>
+  </a>
+    		<b class="shop">SHOP</b>
+    		<div class="about">ABOUT</div>
+<a href="Contact.html" class="button-link">
+  <b class="contacts">CONTACTS</b>
+  </a>
+    		<div class="divider">
+    		</div>
+
+	  <a href="Shop.html" class="button-link">
+  <b class="home2"> DON'T BE LATE TEE  /</b>
+</a>
+<a href="Shop2.html" class="button-link">
+  <b class="home211">EVERYDAY COMFORT  /</b>
+</a>		
+    		<div class="home222">DO GOOD WORK</div>
+
+
+    		<div class="product-image-background">
+						<img src="Do%20good%20work.jpg" width="610" height="650" alt="Do good work T-shirt product image">
+    		</div>
+    		<div class="product-page-child" id="frame">
+    		</div>
+    		<b class="new-arrival">NEW ARRIVAL  •  ORIGINAL GRAPHIC</b>
+    		<b class="do-good-work">Do Good Work</b>
+    		<b class="b">₱ 499.00</b>
+    		<div class="divider2">
+    		</div>
+    		<div class="keep-the-momentum">Keep making things that matter. A bold, everyday tee <br>for those who show up and make every moment count.</div>
+    		<b class="select-size">SELECT SIZE</b>
+            <div class="size-selector" role="group" aria-label="Select shirt size">
+              <button type="button" class="size-option size-s" data-size="S" aria-pressed="false">S</button>
+              <button type="button" class="size-option size-m" data-size="M" aria-pressed="false">M</button>
+              <button type="button" class="size-option size-l" data-size="L" aria-pressed="false">L</button>
+              <button type="button" class="size-option size-xl" data-size="XL" aria-pressed="false">XL</button>
+              <button type="button" class="size-option size-2xl" data-size="2XL" aria-pressed="false">2XL</button>
+            </div>
+            <label class="quantity-label" for="quantity">QUANTITY</label>
+            <div class="quantity-control">
+              <button type="button" id="quantity-decrease" aria-label="Decrease quantity" onclick="changeQuantity(-1)">−</button>
+              <input type="number" id="quantity" name="quantity" value="1" min="1" max="99" inputmode="numeric" aria-label="Quantity">
+              <button type="button" id="quantity-increase" aria-label="Increase quantity" onclick="changeQuantity(1)">+</button>
+            </div>
+            <script>
+              function changeQuantity(amount) {
+                const field = document.getElementById("quantity");
+                const current = Number.parseInt(field.value, 10) || 1;
+                field.value = Math.min(99, Math.max(1, current + amount));
+              }
+            </script>
+            <div class="add-to-cart">
+              <div class="add-to-cart2"></div>
+              <b class="add-to-cart3">ADD TO CART  →</b>
+            </div>
+            <div class="order-now">
+              <div class="order-now2"></div>
+              <button type="button" class="order-now3" id="order-now-button">ORDER NOW</button>
+            </div>
+            <div class="comfortable-everyday-fit">✓  Comfortable everyday fit     ✓  Original print</div>
+    		<div class="footer">
+    		</div>
+    		<a href="SimpleTees.html" class="simple-tees2 brand-home-link">SIMPLE TEES</a>
+    		<a href="PrivacyPolicy.html" class="button-link">
+  <b class="home3">Privacy Policy</b>
+  </a>
+  	</div>
+  	
+  	
+
+
+  	
+  	
+  	
+  	<script>
+    		var frame = document.getElementById("frame");
+    		if(frame) {
+      			frame.addEventListener("click", function () {
+        				var popup = document.getElementById("frameContainer");
+        				if(!popup) return;
+        				var popupStyle = popup.style;
+        				if(popupStyle) {
+          					popupStyle.display = "flex";
+          					popupStyle.zIndex = 100;
+          					popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+          					popupStyle.alignItems = "center";
+          					popupStyle.justifyContent = "center";
+        				}
+        				popup.setAttribute("closable", "");
+        				
+        				var onClick = popup.onClick || function(e) {
+          					if(e.target === popup && popup.hasAttribute("closable")) {
+            						popupStyle.display = "none";
+          					}
+        				};
+        				popup.addEventListener("click", onClick);
+      			});
+    		}</script></body>
+</html>
